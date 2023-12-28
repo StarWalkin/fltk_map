@@ -1,11 +1,11 @@
 # SJTU CS2309 Project1: fltk_map
 这是2023-2024学年第一学期SJTUCS2309“问题求解与实践”课程的项目1代码，主要实现的功能是***通过fltk库进行GUI编程，使得能够导入一张包含比例尺的百度地图截图，可以选定任一块区域，将其高亮化显示，并计算出像素面积和实际面积。***
 
-<img src=".demo1.jpg" style="zoom: 25%;" />
+<img src="demo1.jpg" style="zoom: 25%;" />
 
 <center>示例1.验收要求中提供的示例图</center>
 
-<img src=".demo2.jpg" style="zoom: 25%;" />
+<img src="demo2.jpg" style="zoom: 25%;" />
 
 <center>示例2.华东师范大学（闵行校区）</center>
 
