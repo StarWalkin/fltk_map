@@ -1,9 +1,4 @@
 
-//
-// This is example code from Chapter 16.5 "An example" of
-// "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
-//
-
 #include <iostream>
 #include <sstream>
 #include "Graph.h"        // get access to our graphics library facilities
@@ -58,18 +53,18 @@ private:
             int x = Fl::event_x();
             int y = Fl::event_y();
 
-            // ÅÐ¶Ïµã»÷Î»ÖÃÊÇ·ñÔÚ°´Å¥·¶Î§ÄÚ
+            // ï¿½Ð¶Ïµï¿½ï¿½Î»ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ú°ï¿½Å¥ï¿½ï¿½Î§ï¿½ï¿½
             if (y>=55) {
-                // ´¦ÀíÊó±êµã»÷´°¿ÚÆäËûÇøÓòµÄÊÂ¼þ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
                 std::ostringstream oss;
                 oss << "(" << x << "," << y << ")";
                 std::string s3 = oss.str();
                 xy_clicked.put(s3);
-                // ÔÚÕâÀï¿ÉÒÔÖ´ÐÐÄãÏëÒªµÄÆäËû²Ù×÷
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             }
         }
 
-        // µ÷ÓÃ»ùÀàµÄÊÂ¼þ´¦Àíº¯Êý£¬È·±£±£Áô°´Å¥µÄµã»÷»Øµ÷
+        // ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½Äµï¿½ï¿½ï¿½Øµï¿½
         return Fl_Window::handle(event);
     }
 
@@ -256,199 +251,3 @@ catch (...) {
 
 
 
-//#include <iostream>
-//#include "Simple_window.h"    // get access to our window library
-//#include "Graph.h"            // get access to our graphics library facilities
-////#include "superellipse.h"
-////#include "poly.h"
-//#include <vector>
-//#include <cmath>
-//#include <iomanip>
-//#include "highlight.h"
-//#include <sstream>
-//using namespace Graph_lib;
-//
-////int calculate_area(highlight_poly poly){
-////    int numPoints =  poly.points.size();
-////    double area = 0.0;
-////
-////    for (int i = 0; i < numPoints; ++i) {
-////        int next = (i + 1) % numPoints;  // ÏÂÒ»¸ö¶¥µãµÄË÷Òý
-////
-////        area += (poly.points[i].x * points[next].y - points[next].x * points[i].y);
-////    }
-////
-////    // ×îºó³ËÒÔ 0.5£¬²¢È¡¾ø¶ÔÖµ
-////    area = 0.5 * std::fabs(area);
-////
-////    return area;
-////}
-//
-////------------------------------------------------------------------------------
-//
-//struct Map_window : Graph_lib::Window {
-//    Map_window(Point xy, int w, int h, const string& title );
-//    vector<Point> points;
-//private:
-//    Button next_button;        // add (next_x,next_y) to lines
-//    Button quit_button;
-//    Button clear_button;
-//    In_box next_x;
-//    In_box next_y;
-//    Out_box xy_out;
-//    Out_box xy_first;
-//    Out_box pixel_area;
-//    Out_box real_area;
-//
-//
-//    static void cb_next(Address, Address); // callback for next_button
-//    void next();
-//    static void cb_quit(Address, Address); // callback for quit_button
-//    void quit();
-//    static void cb_clear(Address, Address); // callback for clear_button
-//    void clear();
-//};
-//
-////------------------------------------------------------------------------------
-//
-//Map_window::Map_window(Point xy, int w, int h, const string& title)
-//        :Window(xy,w,h,title),
-//         next_button(Point(x_max()-150,0), 70, 20, "Next point", cb_next),
-//         quit_button(Point(x_max()-70,0), 70, 20, "Quit", cb_quit),
-//         clear_button(Point(x_max()-70,0), 70, 20, "clear", cb_clear),
-//         next_x(Point(x_max()-310,0), 50, 20, "next x:"),
-//         next_y(Point(x_max()-210,0), 50, 20, "next y:"),
-//         xy_out(Point(100,0), 100, 20, "current (x,y):"),
-//         xy_first(Point(100,30), 100, 20, "start (x,y):"),
-//         pixel_area(Point(x_max()-450,30), 100, 20, "pixel area:"),
-//         real_area(Point(x_max()-350,30), 100, 20, "real area:")
-//
-//{
-//    attach(next_button);
-//    attach(quit_button);
-//    attach(clear_button);
-//    attach(next_x);
-//    attach(next_y);
-//    attach(xy_out);
-//    attach(xy_first);
-//    attach(pixel_area);
-//    attach(real_area);
-////    attach(lines);
-//}
-//
-////------------------------------------------------------------------------------
-//
-//void Map_window::cb_quit(Address, Address pw)    // "the usual"
-//{
-//    reference_to<Map_window>(pw).quit();
-//}
-//
-////------------------------------------------------------------------------------
-//
-//void Map_window::quit()
-//{
-//    hide();        // curious FLTK idiom for delete window
-//}
-//
-////------------------------------------------------------------------------------
-//
-//void Map_window::cb_next(Address, Address pw)     // "the usual"
-//{
-//    reference_to<Map_window>(pw).next();
-//}
-//
-////------------------------------------------------------------------------------
-//void Map_window::next()
-//{
-//    int x = next_x.get_int();
-//    int y = next_y.get_int();
-//
-//    points.push_back(Point(x,y));
-//
-//    // update current position readout:
-//    stringstream ss,ss1;
-//    ss << '(' << x << ',' << y << ')';
-//    xy_out.put(ss.str());
-//    ss << '(' << points[0].x << ',' << points[0].y << ')';
-//    xy_first.put(ss.str());
-//
-//    redraw();
-//}
-//
-////-----------------------------------------------------------------------
-//void Map_window::cb_clear(Address, Address pw)    // "the usual"
-//{
-//    reference_to<Map_window>(pw).quit();
-//}
-//
-////----------------------------------------------------------------------------------
-//
-//void Map_window::clear()
-//{
-//
-//    redraw();
-//}
-//
-////------------------------------------------------------------------------------
-//
-//int main()
-//{
-//    Simple_window win(Point(100,100),1200,1000,"Baidu_Map");
-////    Image baidu_map(Point(300,300), "hua_dong_shi_da.jpg");
-////    win.attach(baidu_map);
-//
-//    return gui_main();
-//}
-//
-//
-
-
-//int main(){
-//    using namespace Graph_lib;
-//    Image baidu_map(Point(0,0), "hua_dong_shi_da.jpg");
-//    int w = baidu_map.get_width();
-//    int h = baidu_map.get_height();
-//    std::cout << w << std::endl;
-//    std::cout << h << std::endl;
-//    Simple_window win(Point(100,100),600,800,"Baidu_Map");
-//    win.attach(baidu_map);
-//    win.set_label("Baidu_Map");
-//    vector <Point> points_init;
-//    int XX, YY;
-//    std::cout << "ÇëÊäÈëÐÎÈç¡®XX:YYm¡¯µÄ±ÈÀý³ß£¬ÀýÈç32:200m" <<endl;
-//    std::cout << "XX:" ;
-//    std::cin >> XX;
-//    std::cout << endl ;
-//    std::cout << "YY:" ;
-//    std::cin >> YY;
-//    std::cout << "m" << endl;
-//    std::cout << "ÏÖÔÚÇëÒÀ´ÎÊäÈëÐèÒªÁ¬½ÓµÄ¸÷µã£¬ÇøÓò½«ÒÔÊäÈëµãµÄË³ÐòË³´ÎÁ¬½Ó" << std::endl;
-//    int x, y;
-//    while (cin >> x >> y){
-//        points_init.push_back(Point(x,y));
-//    }
-////    points_init.push_back(Point(100,100));
-////    points_init.push_back(Point(200,200));
-////    points_init.push_back(Point(300,100));
-////    points_init.push_back(Point(600,700));
-////    points_init.push_back(Point(500,800));
-//    highlight_poly selected(points_init);
-//    highlight_poly_outline selected_outline(points_init);
-//    double pixel_area = selected.calculate_area();
-////    std::cout << "area: " << pixel_area << std::endl;
-//    selected.set_color(FL_YELLOW);
-//    selected_outline.set_color(FL_RED);
-//    win.attach(selected);
-//    win.attach(selected_outline);
-//
-//    double rate = (YY*1.00)/(XX*1.00);
-//    double real_area = pixel_area * pow(rate, 2);
-//
-//    std::cout << "ÏñËØÃæ»ý£º" << setprecision(6) << pixel_area << std::endl;
-//    std::cout << "Êµ¼ÊÃæ»ý£º" << setprecision(6) <<  real_area << "m^2" << std::endl;
-//
-//
-//    win.wait_for_button();
-//
-//    return 0;
-//}
